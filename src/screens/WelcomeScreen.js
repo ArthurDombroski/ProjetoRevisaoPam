@@ -1,7 +1,12 @@
-import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import * as React from 'react';
 
 export default function WelcomeScreen() {
+    const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Image
@@ -21,7 +26,7 @@ export default function WelcomeScreen() {
         <Text style={styles.googleText}>Entrar com Google</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.otherButton}>
+      <TouchableOpacity style={styles.otherButton} onPress={() => navigation.navigate("Login")}>
         <Text style={styles.otherText}>Outras opções</Text>
       </TouchableOpacity>
     </View>
