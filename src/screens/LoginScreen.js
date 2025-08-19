@@ -19,18 +19,12 @@ export default function LoginScreen() {
       />
 
       <Text style={styles.Texto}>Senha</Text>
-      <View style={styles.passwordInputContainer}>
-
+      <View style={styles.senhaInputContainer}>
         <TextInput
-          style={styles.passwordInput}
+          style={styles.senhaInput}
           placeholder="Digite sua senha"
           secureTextEntry={true}
         />
-        <TouchableOpacity
-          style={styles.passwordToggle}
-        >
-          <Text style={styles.passwordToggleText}></Text>
-        </TouchableOpacity>
       </View>
 
       <View style={styles.optionsContainer}>
@@ -39,7 +33,7 @@ export default function LoginScreen() {
           <Text style={styles.optionsText}>Lembrar senha</Text>
         </View>
         <TouchableOpacity>
-          <Text style={styles.forgotPasswordText}>Esqueci a senha</Text>
+          <Text style={styles.esqSenhaText}>Esqueci a senha</Text>
         </TouchableOpacity>
       </View>
 
@@ -53,7 +47,7 @@ export default function LoginScreen() {
         </TouchableOpacity>
       </View>
 
-      <Text style={styles.orText}>ou continue com</Text>
+      <Text style={styles.ouText}>ou continue com</Text>
 
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialGoogle}>
@@ -93,6 +87,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     alignSelf: 'top',
     color: '#111',
+    gap: 10,
   },
   subtitle: {
     fontSize: 16,
@@ -109,7 +104,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     fontSize: 16,
   },
-  passwordInputContainer: {
+  senhaInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#fff',
@@ -119,17 +114,10 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     paddingRight: 10,
   },
-  passwordInput: {
+  senhaInput: {
     flex: 1,
     padding: 14,
     fontSize: 16,
-  },
-  passwordToggle: {
-    padding: 8,
-  },
-  passwordToggleText: {
-    fontSize: 20,
-    color: '#8e8e93',
   },
   optionsContainer: {
     flexDirection: 'row',
@@ -153,7 +141,7 @@ const styles = StyleSheet.create({
     color: '#111',
     fontSize: 14,
   },
-  forgotPasswordText: {
+  esqSenhaText: {
     color: '#34c759',
     fontSize: 14,
     fontWeight: '600',
@@ -191,7 +179,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 16,
   },
-  orText: {
+  ouText: {
     textAlign: 'center',
     marginBottom: 20,
     color: '#8e8e93',
@@ -213,10 +201,6 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     padding: 12,
     marginHorizontal: 12,
-  },
-  socialIcon: {
-    width: 24,
-    height: 24,
   },
 });
 
